@@ -1,0 +1,116 @@
+<footer>
+    <div class="section-container footer-container">
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-4">
+                        <h4>{{ section.settings.left_column_heading }}</h4>
+                        <p> {{ section.settings.left_column_para }}</p>
+                    </div>
+
+                    <div class="col-md-4">
+                        <h4> {{ section.settings.mid_column_heading }}</h4>
+                        <p>
+                            <a href="{{section.settings.fb_link }}" class="social-round-icon white-round-icon fa-icon" title="">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                          </a>
+                          <a href="{{section.settings.insta_link }}" class="social-round-icon white-round-icon fa-icon" title="">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                          </a>
+                          <a href="{{section.settings.linkedin_link }}" class="social-round-icon white-round-icon fa-icon" title="">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                          </a>
+                        </p>
+                        <p><small> {{ section.settings.mid_column_para_1 }} <a href="http://www.mashup-template.com/" class="link-like-text" title="Create website with free html template"> {{ section.settings.mid_column_para_2 }} </a>/<a href="http://www.unsplash.com/" class="link-like-text" title="Beautiful Free Images">{{ section.settings.mid_column_para_3}}</a></small></p>    
+                    </div>
+
+                    <div class="col-md-4">
+                        <h4> {{ section.settings.right_column_heading }}  </h4>
+                        
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="text" class="form-control footer-input-text">
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-primary btn-newsletter ">OK</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+{% schema %}
+{
+    "name": "Footer section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "left_column_heading",
+            "label": "Left Column Heading"
+        },
+
+        {
+            "type": "text",
+            "id": "left_column_para",
+            "label": "Left Column Paragraph"
+        },
+
+        {
+            "type": "text",
+            "id": "mid_column_heading",
+            "label": "Middle Column Heading"
+        },
+
+        {
+            "type": "url",
+            "id": "fb_link",
+            "label": "Facebook Link"
+            },
+
+            {
+                "type": "url",
+                "id": "insta_link",
+                "label": "Instagram Link"
+                },
+
+                {
+                    "type": "url",
+                    "id": "linkedin_link",
+                    "label": "LinkedIn Link"
+                    },
+                    
+
+                    {
+                        "type": "text",
+                        "id": "mid_column_para_1",
+                        "label": "Middle Column Paragraph"
+                    },
+                    
+
+                    {
+                        "type": "text",
+                        "id": "mid_column_para_2",
+                        "label": "Middle Column Paragraph"
+                    },
+                    
+
+                    {
+                        "type": "text",
+                        "id": "mid_column_para_3",
+                        "label": "Middle Column Paragraph"
+                    },
+
+                    {
+                        "type": "text",
+                        "id": "right_column_heading",
+                        "label": "Right Column Heading"
+                    }
+
+
+    ]
+}
+{% endschema %}

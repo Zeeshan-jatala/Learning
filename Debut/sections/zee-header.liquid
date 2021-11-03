@@ -1,0 +1,131 @@
+ <!-- Add your content of header -->
+ <header>
+    <nav class="navbar  navbar-fixed-top navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle uarr collapsed" data-toggle="collapse" data-target="#navbar-collapse-uarr">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand navbar-logo-img" href="{{routes.root_url}}" title="">
+              {% capture logo_alt %} {{shop.name}} {% endcapture %}
+              {%- comment -%}
+              {% assign logoImg = section.settings.logo %}
+              <img src="./assets/images/mashuptemplate.svg" class="navbar-logo-img" alt="">
+              {%- endcomment -%}
+              <img class="navbar-logo-img" src="{{ section.settings.logo | img_url: 'small' }}" alt="">
+          </a>
+        </div>
+  
+        <div class="collapse navbar-collapse" id="navbar-collapse-uarr">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="{{ section.settings.nav_link_1 }}" title="" class="active"> {{ section.settings.nav_link_text_1 }} </a></li>
+            <li><a href="{{ section.settings.nav_link_2 }}" title=""> {{ section.settings.nav_link_text_2 }}</a></li>
+            <li><a href="{{ section.settings.nav_link_3 }}" title=""> {{ section.settings.nav_link_text_3 }} </a></li>
+            <li><a href="{{ section.settings.nav_link_4 }}" title=""> {{ section.settings.nav_link_text_4 }} </a></li>
+            <li><a href="{{ section.settings.nav_link_5 }}" title=""> {{ section.settings.nav_link_text_5 }} </a></li>
+  
+            <li>
+              <p>
+                <a href="{{section.settings.header_link}}" class="btn btn-primary navbar-btn" title="">{{section.settings.header_link_text}}</a>
+              </p>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+
+  {% schema %}
+  {
+     "name": "Header",
+     "settings": [  
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo Image"
+    },
+    {
+        "type": "text",
+        "id": "nav_link_text_1",
+        "label": "Nav Menu Name"
+      },
+
+      {
+          "type": "url",
+          "id": "nav_link_1",
+          "label": "Link"
+          },
+
+    {
+        "type": "text",
+        "id": "nav_link_text_2",
+        "label": "Nav Menu Name"
+      },
+
+      {
+          "type": "url",
+          "id": "nav_link_2",
+          "label": "Link"
+          },
+
+    {
+        "type": "text",
+        "id": "nav_link_text_3",
+        "label": "Nav Menu Name"
+      },
+
+      {
+          "type": "url",
+          "id": "nav_link_3",
+          "label": "Link"
+          },
+          
+      {
+        "type": "text",
+        "id": "nav_link_text_4",
+        "label": "Nav Menu Name"
+      },
+
+      {
+          "type": "url",
+          "id": "nav_link_4",
+          "label": "Link"
+          },
+{
+        "type": "text",
+        "id": "nav_link_text_5",
+        "label": "Nav Menu Name"
+      },
+
+      {
+          "type": "url",
+          "id": "nav_link_5",
+          "label": "Link"
+          },
+
+
+
+
+
+
+
+          {
+              "type": "text",
+              "id": "header_link_text",
+              "label": "Link Name"
+            },
+
+            {
+                "type": "url",
+                "id": "header_link",
+                "label": "Link"
+                }
+          
+     ]
+  }
+  {% endschema %}

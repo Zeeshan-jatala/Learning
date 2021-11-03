@@ -1,0 +1,52 @@
+<div class="section-container background-color-container white-text-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="text-center">
+                    <h2> {{ section.settings.info_heading }} </h2>
+                    <p> {{ section.settings.info_para }} </p>
+                    <a href="{{section.settings.info_link}}" title="" class="btn btn-primary btn-lg">{{section.settings.info_link_text}}</a>
+                </div>
+            </div>
+        </div>
+     </div>
+ </div>
+
+
+
+{% schema %}
+{
+    "name": "Info Section",
+    "settings": [
+        
+        {
+            "type": "text",
+            "id": "info_heading",
+            "label": "Info Heading"
+          },
+
+          
+
+          {
+              "type": "text",
+              "id": "info_para",
+              "label": "Info Paragraph"
+            },
+
+            {
+                "type": "text",
+                "id": "info_link_text",
+                "label": "Link Name"
+              },
+  
+              {
+                  "type": "url",
+                  "id": "info_link",
+                  "label": "Link"
+                  }
+          
+
+
+    ]
+}
+{% endschema %}

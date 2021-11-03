@@ -1,0 +1,62 @@
+
+
+
+
+<div id="banner_background_image" class="white-text-container background-image-container" style="background-image: url('{{section.settings.background_image | image_url }}')">
+    <div class="opacity"></div>
+    <div class="container">
+        <div class="row">
+           
+            <div class="col-md-6">
+                <h1>{{ section.settings.banner_heading }}</h1>
+                <p> {{ section.settings.banner_para }}</p>
+                 <a href="{{section.settings.hero_link }}" title="" class="btn btn-lg btn-primary">{{section.settings.hero_link_text}}</a>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+{% schema %}
+{
+    "name": "Hero Section",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "background_image",
+            "label": "Banner image"
+        },
+
+        {
+            "type": "text",
+            "id": "banner_heading",
+            "label": "Banner Heading"
+          },
+
+          {
+              "type": "text",
+              "id": "banner_para",
+              "label": "Banner Paragraph"
+            },
+            
+          
+          {
+              "type": "text",
+              "id": "hero_link_text",
+              "label": "Link Name"
+            },
+
+            {
+                "type": "url",
+                "id": "hero_link",
+                "label": "Link"
+                }
+          
+
+
+    ]
+}
+{% endschema %}

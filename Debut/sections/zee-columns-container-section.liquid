@@ -1,0 +1,104 @@
+<div class="section-container border-section-container">
+    <div class="container">
+            <div class="row">
+                <div class="col-md-12 section-container-spacer">
+                    <div class="text-center">
+                        <h2> {{ section.settings.main_column_heading }} </h2>
+                        <p> {{ section.settings.main_column_para }} </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="fa-container">
+                        <i class="fa fa-comment-o fa-3x" aria-hidden="true"></i>
+                    </div>
+                    <div class="text-center">
+                        <h3> {{ section.settings.column_heading_1 }} </h3>
+                    </div>
+                    <div>
+                        <p> {{ section.settings.column_para_1 }} </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="fa-container">
+                        <i class="fa fa-heart-o fa-3x" aria-hidden="true"></i>
+                    </div>
+                    <div class="text-center">
+                        <h3> {{ section.settings.column_heading_2 }} </h3>
+                    </div>
+                    <div>
+                        <p> {{ section.settings.column_para_2 }} </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="fa-container">
+                        <i class="fa fa-bell-o fa-3x" aria-hidden="true"></i>
+                    </div>
+                    <div class="text-center">
+                        <h3> {{ section.settings.column_heading_3 }}  </h3>
+                    </div>
+                    <div>
+                        <p> {{ section.settings.column_para_3 }} </p>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "column-container-section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "main_column_heading",
+            "label": "Main Column Heading"
+        },
+
+        {
+            "type": "text",
+            "id": "main_column_para",
+            "label": "Main Column Paragraph"
+        },
+
+        {
+            "type": "text",
+            "id": "column_heading_1",
+            "label": "Column-1 Heading"
+        },
+        
+
+        {
+            "type": "text",
+            "id": "column_para_1",
+            "label": "Column-1 Paragraph"
+        },
+
+        {
+            "type": "text",
+            "id": "column_heading_2",
+            "label": "Column-2 Heading"
+        },
+
+        {
+            "type": "text",
+            "id": "column_para_2",
+            "label": "Column-2 Paragraph"
+        },
+
+        {
+            "type": "text",
+            "id": "column_heading_3",
+            "label": "Column-3 Heading"
+        },
+
+        {
+            "type": "text",
+            "id": "column_para_3",
+            "label": "Column-3 Paragraph"
+        }
+
+    ]
+}
+{% endschema %}
